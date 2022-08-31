@@ -6,10 +6,6 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import date from "../public/date.svg"
-import network from "../public/cellular-connection.svg"
-import wifi from "../public/wifi.svg"
-import battery from "../public/battery.svg"
 import bell from "../public/bell-icon.svg"
 import arrow from "../public/arrow.svg"
 import home from "../public/home.svg"
@@ -19,6 +15,7 @@ import wishlist from "../public/wishlist.svg"
 import profile from "../public/profile.svg";
 
 import ProductCard from './ProductCard';
+import StatusBar from './StatusBar';
 
 const products = [
     {
@@ -51,14 +48,7 @@ const products = [
 const Homepage = () => {
     return (
         <div style={{ margin: "20px" }}>
-            <div className={classes.status}>
-                <div><span className={classes.spanMargin}><Image src={date} alt='date' /></span></div>
-                <div>
-                    <span className={classes.spanMargin}><Image src={network} alt='date' /></span>
-                    <span className={classes.spanMargin}><Image src={wifi} alt='date' /></span>
-                    <span className={classes.spanMargin}><Image src={battery} alt='date' /></span>
-                </div>
-            </div>
+            <StatusBar/>
             <div className={classes.status}>
                 <h2 style={{ fontWeight: "bold" }}>Explore What <br /> Your Hospital Needs</h2>
                 <span className={classes.bell}><Image src={bell} /></span>
@@ -98,11 +88,11 @@ const Homepage = () => {
             </div>
             <Navbar fixed='bottom' className={classes.bottom}>
                 <Container >
-                    <Image src={home}/>
-                    <Image src={chat } />
-                    <Image src={cart}/>
+                    <Image src={home} />
+                    <Image src={chat} />
+                    <Image src={cart} />
                     <Image src={wishlist} />
-                    <Image src={profile}/>
+                    <Image src={profile} />
                 </Container>
             </Navbar>
 

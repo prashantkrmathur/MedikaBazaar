@@ -1,0 +1,9 @@
+.bar{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.spanMargin{
+    margin: 5px;
+}
