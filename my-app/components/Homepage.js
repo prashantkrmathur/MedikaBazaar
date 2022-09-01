@@ -51,7 +51,7 @@ const Homepage = () => {
             <StatusBar/>
             <div className={classes.status}>
                 <h2 style={{ fontWeight: "bold" }}>Explore What <br /> Your Hospital Needs</h2>
-                <span className={classes.bell}><Image src={bell} /></span>
+                <span className={classes.bell}><Image src={bell} alt="image" /></span>
             </div>
             <div>
                 <InputGroup className={classes.input}>
@@ -60,7 +60,7 @@ const Homepage = () => {
             </div>
             <div className={classes.category}>
                 <h3 style={{ fontWeight: "bold" }} >Categories</h3>
-                <h6 style={{ color: "blue", marginTop: "8px" }}>See all <span><Image src={arrow} /></span></h6>
+                <h6 style={{ color: "blue", marginTop: "8px" }}>See all <span><Image src={arrow} alt="image" /></span></h6>
             </div>
             <div className={classes.category}>
                 <Card style={{ width: "45%" }}>
@@ -72,7 +72,7 @@ const Homepage = () => {
             </div>
             <div className={classes.category}>
                 <h3 style={{ fontWeight: "bold" }} >Products</h3>
-                <h6 style={{ color: "blue", marginTop: "8px" }}>See all <span><Image src={arrow} /></span></h6>
+                <h6 style={{ color: "blue", marginTop: "8px" }}>See all <span><Image src={arrow} alt="image" /></span></h6>
             </div>
             <div className={classes.products}>
                 {products.map((item) => {
@@ -88,11 +88,11 @@ const Homepage = () => {
             </div>
             <Navbar fixed='bottom' className={classes.bottom}>
                 <Container >
-                    <Image src={home} />
-                    <Image src={chat} />
-                    <Image src={cart} />
-                    <Image src={wishlist} />
-                    <Image src={profile} />
+                    <Image src={home} alt="image" />
+                    <Image src={chat} alt="image" />
+                    <Image src={cart} alt="image" />
+                    <Image src={wishlist} alt="image" />
+                    <Image src={profile} alt="image" />
                 </Container>
             </Navbar>
 
