@@ -10,10 +10,12 @@ import Image from 'next/image'
 const StatusBar = () => {
   return (
       <Navbar fixed='top' className={classes.bar}>
-          <div style={{ fontWeight: "bold" }}><Clock
+          <div style={{ fontWeight: "bold" }}>
+              <Clock
               format={'h:mm'}
               style={{ fontSize: '1em' }}
-              ticking={true} /></div>
+                  ticking={true} />
+          </div>
           <div>
               <span className={classes.spanMargin}><Image src={network} alt='date' /></span>
               <span className={classes.spanMargin}><Image src={wifi} alt='date' /></span>

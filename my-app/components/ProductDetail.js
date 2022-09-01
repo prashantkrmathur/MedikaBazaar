@@ -9,6 +9,8 @@ import review from "../public/review.svg"
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import wishlistIcon from "../public/wishlistIcon.svg"
+import Modal from 'react-bootstrap/Modal';
+import classes from "./ProductDetail.module.css"
 
 const ProductDetail = (props) => {
   const { image, name } = props;
@@ -19,6 +21,13 @@ const ProductDetail = (props) => {
   const [selectDes, setSelectDes] = useState(true);
   const [selectMat, setSelectMat] = useState(false);
   const [selectItem, setSelectItem] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [selectDiv, setSelectDiv] = useState(false);
+
+  const handleModal = (event) => {
+    event.preventDefault()
+    setShowModal(true);
+  }
 
   const handleDescriptionBtn = (event) => {
     event.preventDefault();
@@ -47,7 +56,7 @@ const ProductDetail = (props) => {
         </Card.Body>
         <h5 style={{ width: "93%", margin: "auto", marginBottom:"15px" }}>Choose Variant</h5>
         <Card.Body style={{width:"95%", margin:"auto", backgroundColor:"whitesmoke"}}>
-          <div style={{display:"flex", justifyContent:"space-around"}}>
+          <div style={{display:"flex", justifyContent:"space-around"}} onClick={handleModal}>
             <div><span style={{ fontWeight: "bold" }}>Color : </span><span style={{ fontWeight: "bold",color:"blue" }}>{color}</span></div>
             <div><span style={{ fontWeight: "bold" }}>Size : </span><span style={{ fontWeight: "bold", color: "blue" }}>{size}</span></div>
             <div><span style={{ fontWeight: "bold" }}>Intensity : </span><span style={{ fontWeight: "bold", color: "blue" }}>{intensity}</span></div>
@@ -69,7 +78,81 @@ const ProductDetail = (props) => {
           <Button style={{ width: "80%" }} variant={!selectItem ? "primary" : "secondary"} onClick={(event) => { event.preventDefault(); setSelectItem(!selectItem) }}>{!selectItem ? "Add to Bag" : "Added to the Bag" }</Button>
         </Container>
       </Navbar>
+      {showModal && 
+        <Modal className='modal-dialog' show={showModal} onHide={() => setShowModal(false)} aria-labelledby="bottom">
+          <Modal.Body>
+            <h5 style={{ fontWeight: "bold" }}>Select variant</h5>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+              <div><span style={{ fontWeight: "bold" }}>Color : </span><span style={{ fontWeight: "bold", color: "blue" }}>{color}</span></div>
+              <div> <span style={{ color: "lightblue" }}>(3 options available)</span></div>
+            </div>
+            <div style={{display:"flex", justifyContent:"space-around",marginTop:"20px", marginBottom:"20px"}}>
+              <Card style={{width:"33%"}}>
+                <Card.Body className={selectDiv && classes.selectDiv || '' } style={{display:"flex"}}>
+                  <div style={{ height: "20px", width: "20px", borderRadius: "10px", backgroundColor: "red" }}></div>
+                  <div style={{ marginLeft: "5px" }}>Red</div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "33%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                  <div style={{ height: "20px", width: "20px", borderRadius: "10px", backgroundColor: "blue" }}></div>
+                  <div style={{ marginLeft: "5px" }}>Blue</div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "28%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                  <div style={{ height: "20px", width: "20px", borderRadius: "10px", backgroundColor: "whitesmoke",border:"1px black" }}></div>
+                  <div style={{marginLeft:"5px"}}>White</div>
+                </Card.Body>
+              </Card>
+            </div>
 
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div><span style={{ fontWeight: "bold" }}>Size : </span><span style={{ fontWeight: "bold", color: "blue" }}>{size}</span></div>
+              <div> <span style={{ color: "lightblue" }}>(4 options available)</span></div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-around", marginTop: "20px", marginBottom: "20px" }}>
+              <Card style={{ width: "33%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                 <div>XXL</div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "33%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                  <div>XL</div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "28%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                  <div>L</div>
+                </Card.Body>
+              </Card>
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div><span style={{ fontWeight: "bold" }}>Intensity : </span><span style={{ fontWeight: "bold", color: "blue" }}>{intensity}</span></div>
+              <div> <span style={{ color: "lightblue" }}>(3 options available)</span></div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-around", marginTop: "20px", marginBottom:"20px" }}>
+              <Card style={{ width: "33%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                <div>40cd</div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "33%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                  <div>20cd</div>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "28%" }}>
+                <Card.Body style={{ display: "flex" }}>
+                  <div>10cd</div>
+                </Card.Body>
+              </Card>
+            </div>
+          </Modal.Body>
+
+        </Modal>
+      }
 
     </Fragment>
   )
