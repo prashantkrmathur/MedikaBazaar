@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
+import { useRouter } from "next/router";
 
 const ProductCard = (props) => {
+    const router = useRouter();
     const { name, image, price } = props;
     const [showDetail, setShowDetail] = useState(false);
     
     const handleClick = (event) => {
-        event.preventDefault();
-        setShowDetail(true);
+       router.push('/56')
     }
     return (
         <div style={{ width: "46%",margin:"5px" }} onClick={handleClick}>
