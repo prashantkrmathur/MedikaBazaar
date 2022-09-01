@@ -51,7 +51,7 @@ const ProductDetail = (props) => {
           <h2>Ivoclar Vivadent Bluephase</h2>
           <div style={{display:"flex", justifyContent:"space-between"}}>
             <span style={{ fontWeight: "bold" }}>$599</span>
-            <div style={{display:"flex"}}><div onClick={() => counter !=1 && setCounter(counter-1)}><Image src={minus} /></div> <div style={{marginLeft:"3px", marginRight:"3px"}}>{counter}</div> <div onClick={()=> setCounter(counter+1)}><Image src={plus } /></div></div>
+            <div style={{ display: "flex" }}><div onClick={() => counter != 1 && setCounter(counter - 1)}><Image src={minus} /></div> <div style={{ marginLeft: "3px", marginRight: "3px" }}>{counter}</div> <div onClick={() => setCounter(counter + 1)}><Image src={plus} alt="image" /></div></div>
           </div>
         </Card.Body>
         <h5 style={{ width: "93%", margin: "auto", marginBottom:"15px" }}>Choose Variant</h5>
@@ -70,11 +70,11 @@ const ProductDetail = (props) => {
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
         </p>}
         {selectMat && <p style={{ width: "90%", color: "darkgrey", margin: "auto", marginBottom:"20px" }}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>}
-        <div style={{paddingBottom:"50px", width:"90%", margin:"auto"}}><Image src={review}></Image></div>
+        <div style={{paddingBottom:"50px", width:"90%", margin:"auto"}}><Image src={review} alt="image"></Image></div>
       </Card>
       <Navbar fixed='bottom' style={{ width: "95%", margin: "auto",backgroundColor:"white", borderTop:"1px solid #adb5bd"}}>
         <Container >
-          <Image src={wishlistIcon} />
+          <Image src={wishlistIcon} alt="image" />
           <Button style={{ width: "80%" }} variant={!selectItem ? "primary" : "secondary"} onClick={(event) => { event.preventDefault(); setSelectItem(!selectItem) }}>{!selectItem ? "Add to Bag" : "Added to the Bag" }</Button>
         </Container>
       </Navbar>

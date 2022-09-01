@@ -6,15 +6,21 @@ import wifi from "../public/wifi.svg"
 import battery from "../public/battery.svg"
 import classes from "./StatusBar.module.css"
 import Image from 'next/image'
-import date from "../public/date.svg"
+
 const StatusBar = () => {
   return (
       <Navbar fixed='top' className={classes.bar}>
-             <span className={classes.spanMargin}><Image src={date} alt='date' /></span>
+          <div style={{ fontWeight: "bold" }}>
+              <Clock
+              format={'h:mm'}
+              style={{ fontSize: '1em' }}
+                  ticking={true} />
+          </div>
+          <div>
               <span className={classes.spanMargin}><Image src={network} alt='date' /></span>
               <span className={classes.spanMargin}><Image src={wifi} alt='date' /></span>
               <span className={classes.spanMargin}><Image src={battery} alt='date' /></span>
-     
+          </div>
       </Navbar>
   )
 }
