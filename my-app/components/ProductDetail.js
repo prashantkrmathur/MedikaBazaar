@@ -173,19 +173,19 @@ const ProductDetail = (props) => {
                 <div> <span style={{ color: "lightblue" }}>(3 options available)</span></div>
               </div>
               <div style={{ display: "flex", justifyContent: "space-around", marginTop: "10px", marginBottom: "15px" }}>
-                <Card style={{ width: "33%", border: `${colorRed ? "1px solid #2F5AC7" : "none"}`, background: `${colorRed ? "#F5F8FF" : "none"}` }} onClick={handleRed}>
+                <Card style={{ width: "33%", border: `${colorRed ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${colorRed ? "#F5F8FF" : "none"}` }} onClick={handleRed}>
                   <Card.Body className={selectDiv && classes.selectDiv || ''} style={{ display: "flex" }}>
                     <div style={{ height: "20px", width: "20px", borderRadius: "10px", backgroundColor: "red" }}></div>
                     <div style={{ marginLeft: "5px" }}>Red</div>
                   </Card.Body>
                 </Card>
-                <Card style={{ width: "33%", border: `${colorBlue ? "1px solid #2F5AC7" : "none"}`, background: `${colorBlue ? "#F5F8FF" : "none"}` }} onClick={handleBlue}>
+                <Card style={{ width: "33%", border: `${colorBlue ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${colorBlue ? "#F5F8FF" : "none"}` }} onClick={handleBlue}>
                   <Card.Body style={{ display: "flex" }}>
                     <div style={{ height: "20px", width: "20px", borderRadius: "10px", backgroundColor: "blue" }}></div>
                     <div style={{ marginLeft: "5px" }}>Blue</div>
                   </Card.Body>
                 </Card>
-                <Card style={{ width: "28%", border: `${colorWhite ? "1px solid #2F5AC7" : "none"}`, background: `${colorWhite ? "#F5F8FF" : "none"}` }} onClick={handleWhite}>
+                <Card style={{ width: "28%", border: `${colorWhite ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${colorWhite ? "#F5F8FF" : "none"}` }} onClick={handleWhite}>
                   <Card.Body style={{ display: "flex" }}>
                     <div style={{ height: "20px", width: "20px", borderRadius: "10px", backgroundColor: "whitesmoke", border: "1px black" }}></div>
                     <div style={{ marginLeft: "5px" }}>White</div>
@@ -198,17 +198,17 @@ const ProductDetail = (props) => {
                 <div> <span style={{ color: "lightblue" }}>(4 options available)</span></div>
               </div>
               <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "20px", marginBottom: "20px" }}>
-                <Card style={{ width: "20%", border: `${sizeXXL ? "1px solid #2F5AC7" : "none"}`, background: `${sizeXXL ? "#F5F8FF" : "none"}` }} onClick={handleSizeXXL} >
+                <Card style={{ width: "20%", border: `${sizeXXL ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${sizeXXL ? "#F5F8FF" : "none"}` }} onClick={handleSizeXXL} >
                   <Card.Body style={{ display: "flex" }}>
                     <div>XXL</div>
                   </Card.Body>
                 </Card>
-                <Card style={{ width: "15%", marginLeft: "15px", border: `${sizeXL ? "1px solid #2F5AC7" : "none"}`, background: `${sizeXL ? "#F5F8FF" : "none"}` }} onClick={handleSizeXL}>
+                <Card style={{ width: "15%", marginLeft: "15px", border: `${sizeXL ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${sizeXL ? "#F5F8FF" : "none"}` }} onClick={handleSizeXL}>
                   <Card.Body style={{ display: "flex" }}>
                     <div>XL</div>
                   </Card.Body>
                 </Card>
-                <Card style={{ width: "12%", marginLeft: "15px", border: `${sizeL ? "1px solid #2F5AC7" : "none"}`, background: `${sizeL ? "#F5F8FF" : "none"}` }} onClick={handleSizeL}>
+                <Card style={{ width: "12%", marginLeft: "15px", border: `${sizeL ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${sizeL ? "#F5F8FF" : "none"}` }} onClick={handleSizeL}>
                   <Card.Body style={{ display: "flex" }}>
                     <div>L</div>
                   </Card.Body>
@@ -219,17 +219,17 @@ const ProductDetail = (props) => {
                 <div> <span style={{ color: "lightblue" }}>(3 options available)</span></div>
               </div>
               <div style={{ display: "flex", justifyContent: "flex-start", marginTop: "20px", marginBottom: "20px" }}>
-                <Card style={{ width: "25%", border: `${intensityForty ? "1px solid #2F5AC7" : "none"}`, background: `${intensityForty ? "#F5F8FF" : "none"}` }} onClick={handleIntensityForty}>
+                <Card style={{ width: "25%", border: `${intensityForty ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${intensityForty ? "#F5F8FF" : "none"}` }} onClick={handleIntensityForty}>
                   <Card.Body style={{ display: "flex" }}>
                     <div>40cd</div>
                   </Card.Body>
                 </Card>
-                <Card style={{ width: "22%", marginLeft: "15px", border: `${intensityTwenty ? "1px solid #2F5AC7" : "none"}`, background: `${intensityTwenty ? "#F5F8FF" : "none"}` }} onClick={handleIntensityTwenty}>
+                <Card style={{ width: "22%", marginLeft: "15px", border: `${intensityTwenty ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${intensityTwenty ? "#F5F8FF" : "none"}` }} onClick={handleIntensityTwenty}>
                   <Card.Body style={{ display: "flex" }}>
                     <div>20cd</div>
                   </Card.Body>
                 </Card>
-                <Card style={{ width: "19%", marginLeft: "15px", border: `${intensityTen ? "1px solid #2F5AC7" : "none"}`, background: `${intensityTen ? "#F5F8FF" : "none"}` }} onClick={handleIntensityTen}>
+                <Card style={{ width: "19%", marginLeft: "15px", border: `${intensityTen ? "1px solid #2F5AC7" : "1px solid darkgrey"}`, background: `${intensityTen ? "#F5F8FF" : "none"}` }} onClick={handleIntensityTen}>
                   <Card.Body style={{ display: "flex" }}>
                     <div>10cd</div>
                   </Card.Body>
