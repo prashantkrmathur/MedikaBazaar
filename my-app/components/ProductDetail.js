@@ -44,7 +44,7 @@ const ProductDetail = (props) => {
     <Fragment>
       <StatusBar />
       <div>
-        <img src='https://raw.githubusercontent.com/prashantkrmathur/images/main/image.png'></img>
+        <Image width="500px" height="400px" src='https://raw.githubusercontent.com/prashantkrmathur/images/main/image.png'></Image>
       </div>
       <Card>
         <Card.Body>
