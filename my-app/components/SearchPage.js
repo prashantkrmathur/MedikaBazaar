@@ -28,7 +28,7 @@ const SearchPage = () => {
                     <Image src={search} alt='search-logo'></Image></div>
                 <div>
                     <form onSubmit={handleSubmit}>
-                        <input onInput={handleInput} value={text} style={{ border: "none", outline: "none", width: "115%" }} placeholder='Syringe, Centrifuge, Ventilator'></input>
+                        <input onInput={handleInput} value={text} style={{ border: "none", outline: "none", width: "115%", fill: "none", background: "transparent", }} placeholder='Syringe, Centrifuge, Ventilator'></input>
                     </form>
                 </div>
             </div>

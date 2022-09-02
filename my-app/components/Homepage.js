@@ -64,7 +64,7 @@ const Homepage = () => {
             </div>
             <div style={{ display: "flex", border: "1px solid darkgrey", alignItems:"center", borderRadius:"6px",height:"40px" }}>
                  <div style={{marginTop:"5px",marginLeft:"10px", marginRight:"15px"}}><Image src={search} alt='search-logo'></Image></div> 
-                <div><input style={{ border: "none",outline:"none",width:"115%" }}  onClick={handleSearch} placeholder='Syringe, Centrifuge, Ventilator'></input></div> 
+                <div><input style={{ border: "none",outline:"none",fill:"none",background:"transparent", width:"115%" }}  onClick={handleSearch} placeholder='Syringe, Centrifuge, Ventilator'></input></div> 
             </div>
             <div className={classes.category}>
                 <h3 style={{ fontWeight: "bold" }} >Categories</h3>
