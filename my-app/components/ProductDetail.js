@@ -66,10 +66,10 @@ const ProductDetail = (props) => {
           <Button style={{marginRight:"15px"}} variant={selectDes ? "primary" : "light"} onClick={handleDescriptionBtn}>Discription</Button>
           <Button variant={selectMat ? "primary" : "light"} onClick={handleMaterialBtn}>Material  </Button>
         </div>
-        {selectDes && <p style={{width:"90%", color:"darkgrey", margin:"auto", marginBottom:"20px"}}>
+        {selectDes ? <p style={{width:"90%", color:"darkgrey", margin:"auto", marginBottom:"20px"}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        </p>}
-        {selectMat && <p style={{ width: "90%", color: "darkgrey", margin: "auto", marginBottom:"20px" }}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>}
+        </p> :""}
+        {selectMat ? <p style={{ width: "90%", color: "darkgrey", margin: "auto", marginBottom:"20px" }}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>:""}
         <div style={{paddingBottom:"50px", width:"90%", margin:"auto"}}><Image src={review} alt="image"></Image></div>
       </Card>
       <Navbar fixed='bottom' style={{ width: "95%", margin: "auto",backgroundColor:"white", borderTop:"1px solid #adb5bd"}}>
