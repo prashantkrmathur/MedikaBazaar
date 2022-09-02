@@ -34,8 +34,8 @@ const SearchPage = () => {
             </div>
 
                 {prevSearch.length && <h6>Previous Search</h6>}
-                {prevSearch.length && prevSearch.map((item)=> {
-                    return <p>{item }</p>
+                {prevSearch.length && prevSearch.map((item,id)=> {
+                    return <p key={id}>{item }</p>
                    })
                 }
 
