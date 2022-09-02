@@ -13,9 +13,11 @@ import chat from "../public/chat.svg"
 import cart from "../public/cart.svg"
 import wishlist from "../public/wishlist.svg"
 import profile from "../public/profile.svg";
-
 import ProductCard from './ProductCard';
 import StatusBar from './StatusBar';
+import search from "../public/search.svg"
+import equipment from "../public/equipment.svg"
+import consumable from "../public/consumable.svg"
 
 const products = [
     {
@@ -44,36 +46,46 @@ const products = [
     },
 
 ]
+const handleSearch = (event) => {
+    event.preventDefault();
+
+}
 
 const Homepage = () => {
-    return (
+    return (<>
         <div style={{ margin: "20px" }}>
-            <StatusBar/>
+            <StatusBar />
             <div className={classes.status}>
                 <h2 style={{ fontWeight: "bold" }}>Explore What <br /> Your Hospital Needs</h2>
                 <span className={classes.bell}><Image src={bell} alt="image" /></span>
             </div>
-            <div>
-                <InputGroup className={classes.input}>
-                    <Form.Control placeholder='Syringe, Centrifuge, Ventilator' />
-                </InputGroup>
+            <div style={{ display: "flex", border: "1px solid darkgrey", alignItems:"center", borderRadius:"6px",height:"40px" }}>
+                 <div style={{marginTop:"5px",marginLeft:"10px", marginRight:"15px"}}><Image src={search} alt='search-logo'></Image></div> 
+                <div><input style={{ border: "none",outline:"none",width:"115%" }}  onClick={handleSearch} placeholder='Syringe, Centrifuge, Ventilator'></input></div> 
             </div>
             <div className={classes.category}>
                 <h3 style={{ fontWeight: "bold" }} >Categories</h3>
                 <h6 style={{ color: "blue", marginTop: "8px" }}>See all <span><Image src={arrow} alt="image" /></span></h6>
             </div>
             <div className={classes.category}>
-                <Card style={{ width: "45%" }}>
-                    <Card.Body><span>Equipments</span></Card.Body>
-                </Card>
-                <Card style={{ width: "45%" }}>
-                    <Card.Body>Consumable</Card.Body>
-                </Card>
+                <div style={{ width: "46%", border: "1px solid lightgrey", borderRadius: "5px" }}>
+                    <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>
+                        <span>Equipments</span>
+                        <div ><Image src={equipment} alt='image' /></div>
+                    </div>
+                </div>
+                <div style={{ width: "46%", border: "1px solid lightgrey", borderRadius: "5px" }}>
+                    <div style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>
+                        <span>Consumable</span>
+                        <div><Image src={consumable} alt='image' /></div>
+                    </div>
+                </div>
             </div>
             <div className={classes.category}>
                 <h3 style={{ fontWeight: "bold" }} >Products</h3>
                 <h6 style={{ color: "blue", marginTop: "8px" }}>See all <span><Image src={arrow} alt="image" /></span></h6>
             </div>
+        </div>
             <div className={classes.products}>
                 {products.map((item) => {
                     return (
@@ -95,8 +107,7 @@ const Homepage = () => {
                     <Image src={profile} alt="image" />
                 </Container>
             </Navbar>
-
-        </div>
+     </>
     )
 }
 

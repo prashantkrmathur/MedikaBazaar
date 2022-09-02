@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
-import Clock from 'react-live-clock';
 import network from "../public/cellular-connection.svg"
 import wifi from "../public/wifi.svg"
 import battery from "../public/battery.svg"
@@ -11,10 +10,10 @@ const StatusBar = () => {
   return (
       <Navbar fixed='top' className={classes.bar}>
           <div style={{ fontWeight: "bold" }}>
-              <Clock
+              {/* <Clock
               format={'h:mm'}
               style={{ fontSize: '1em' }}
-                  ticking={true} />
+                  ticking={true} /> */}
           </div>
           <div>
               <span className={classes.spanMargin}><Image src={network} alt='date' /></span>

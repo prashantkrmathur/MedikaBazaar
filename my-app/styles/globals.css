@@ -31,3 +31,7 @@ a {
   right: 0%;
   transform: translateY(-100%);
 }
+::placeholder {
+  color:#dee2e6;
+  opacity: 1; 
+}
