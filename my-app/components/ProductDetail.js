@@ -51,7 +51,7 @@ const ProductDetail = (props) => {
           <h2>Ivoclar Vivadent Bluephase</h2>
           <div style={{display:"flex", justifyContent:"space-between"}}>
             <span style={{ fontWeight: "bold" }}>$599</span>
-            <div style={{ display: "flex" }}><div onClick={() => counter != 1 && setCounter(counter - 1)}><Image src={minus} /></div> <div style={{ marginLeft: "3px", marginRight: "3px" }}>{counter}</div> <div onClick={() => setCounter(counter + 1)}><Image src={plus} alt="image" /></div></div>
+            <div style={{ display: "flex" }}><div onClick={() => counter != 1 && setCounter(counter - 1)}><Image src={minus} alt='image' /></div> <div style={{ marginLeft: "3px", marginRight: "3px" }}>{counter}</div> <div onClick={() => setCounter(counter + 1)}><Image src={plus} alt="image" /></div></div>
           </div>
         </Card.Body>
         <h5 style={{ width: "93%", margin: "auto", marginBottom:"15px" }}>Choose Variant</h5>
