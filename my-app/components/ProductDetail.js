@@ -13,6 +13,7 @@ import Modal from 'react-bootstrap/Modal';
 import classes from "./ProductDetail.module.css"
 import backButton from "../public/back-button.svg"
 import shareIcon from "../public/share-icon.svg"
+import { useRouter } from 'next/router'
 
 const ProductDetail = (props) => {
   const { image, name } = props;
@@ -25,6 +26,7 @@ const ProductDetail = (props) => {
   const [selectItem, setSelectItem] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectDiv, setSelectDiv] = useState(false);
+  const router = useRouter();
 
   const handleModal = (event) => {
     event.preventDefault()
@@ -41,13 +43,17 @@ const ProductDetail = (props) => {
     setSelectDes(false)
     setSelectMat(true)
   }
+  const handleGoback = (event) => {
+    event.preventDefault();
+    router.push("/")
+  }
 
   return (
     <Fragment>
       <StatusBar />
       <div style={{position:"relative"}}>
         <div style={{display:"flex", justifyContent:"space-between", width:"100%",top:"50px",padding:"0px 15px",position:"absolute",zIndex:"9"}}>
-          <div><Image src={backButton} width='35px' height='35px' alt="image" /> </div>
+          <div onClick={handleGoback}><Image src={backButton} width='35px' height='35px' alt="image" /> </div>
           <div><Image src={shareIcon} width='35px' height='35px' alt='image' /> </div>
         </div>
         <div style={{position:"relative"}}>
