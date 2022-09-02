@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from "./Homepage.module.css";
 import Image from 'next/image'
+import { useRouter } from "next/router";
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
@@ -46,12 +47,14 @@ const products = [
     },
 
 ]
-const handleSearch = (event) => {
-    event.preventDefault();
-
-}
 
 const Homepage = () => {
+    const router =  useRouter()
+    const handleSearch = (event) => {
+        event.preventDefault();
+        router.push('/search')
+
+    }
     return (<>
         <div style={{ margin: "20px" }}>
             <StatusBar />

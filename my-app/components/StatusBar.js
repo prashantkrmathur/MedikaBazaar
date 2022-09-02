@@ -5,15 +5,17 @@ import wifi from "../public/wifi.svg"
 import battery from "../public/battery.svg"
 import classes from "./StatusBar.module.css"
 import Image from 'next/image'
+import Clock from 'react-live-clock';
+
 
 const StatusBar = () => {
   return (
       <Navbar fixed='top' className={classes.bar}>
           <div style={{ fontWeight: "bold" }}>
-              {/* <Clock
+              <Clock
               format={'h:mm'}
               style={{ fontSize: '1em' }}
-                  ticking={true} /> */}
+                  ticking={true} />
           </div>
           <div>
               <span className={classes.spanMargin}><Image src={network} alt='date' /></span>
